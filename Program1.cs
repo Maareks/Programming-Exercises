@@ -26,7 +26,7 @@ namespace Program1
 					int typedPinNumber = Convert.ToInt32(Console.ReadLine());
 					if (typedPinNumber != pinNumber)
 					{
-						Console.WriteLine("Wpisałeś błędny PIN, twoja karta została zablokowana do momentu odblokowania jej przez bank");
+						Console.WriteLine("You have entered the wrong PIN, your card is locked until you unlock it by bank.");
 						Console.ReadKey();
 					}
 					else 
@@ -42,21 +42,21 @@ namespace Program1
 
 									break;
 								case 2:
-									Console.WriteLine("How much Do you want to withdraw?");
+									Console.WriteLine("How much do You want to withdraw?");
 									int withdrawedMoney = Convert.ToInt32(Console.ReadLine());
 									if (withdrawedMoney > atmMoney)
 									{
-										Console.WriteLine("Nie ma tyle pieniędzy w bankomacie.");
+										Console.WriteLine("There is not enough money at an ATM.");
 									}
 									else if (withdrawedMoney > currentBalance)
 									{
-										Console.WriteLine("Nie masz tylu środków na koncie");
+										Console.WriteLine("You do not have enough money on your account.");
 									}
 									else
 									{
 										currentBalance = currentBalance - withdrawedMoney;
 										atmMoney = atmMoney - withdrawedMoney;
-										Console.WriteLine("Wybrałes " + withdrawedMoney + " $");
+										Console.WriteLine("You withdrew " + withdrawedMoney + " $");
 										CreateLog("Withdraw", withdrawedMoney);
 
 									}
@@ -85,7 +85,7 @@ namespace Program1
 					int typedOperatorPinNumber = Convert.ToInt32(Console.ReadLine());
 					if (typedOperatorPinNumber != operatorPinNumber)
 					{
-						Console.WriteLine("Wpisałeś błędny PIN");
+						Console.WriteLine("You have entered the wrong PIN number.");
 						Console.ReadKey();
 					}
 					else
